@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orbital Shipyard Publisher</title>
+<style>body{font-family:system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222;background:#f6f3ee}a{color:#a3402c}code{background:#e9e4dc;padding:1px 4px;border-radius:3px}</style></head>
+<body>
+<h1>Orbital Shipyard Publisher</h1>
+<p>How our internal YouTube API client works. It is a private automation of the Orbital Shipyard art studio and is used only on our own channel, <a href="https://www.youtube.com/channel/UC0UEjp5gNaybplALYLfspaA">Orbital Shipyard</a>.</p>
+<h2>What it does</h2>
+<ol>
+<li>Every day our generator renders short vertical videos (about 14 and 28 seconds) of our own isometric sci-fi artwork with our own music.</li>
+<li>After the same video is posted on our Instagram, a scheduled GitHub Actions job uploads it to our YouTube channel as a Short (<code>videos.insert</code>, resumable upload). Title, description and tags come from our own caption.</li>
+<li>It reads our own channel details and our own video statistics (<code>channels.list</code>, <code>videos.list</code>) for a weekly performance review.</li>
+<li>Planned: adding our Shorts to our own playlists (<code>playlistItems.insert</code>) and posting one comment on our own videos.</li>
+</ol>
+<h2>Volume</h2>
+<p>About 2 uploads per day, well within the default quota of 10,000 units.</p>
+<h2>Users and data</h2>
+<p>One user: the studio's own Google account, authorized once with OAuth 2.0. No other YouTube users sign in, and no data about other users is collected or stored. The refresh token is stored encrypted. See the <a href="privacy.html">privacy policy</a>.</p>
+<h2>Contact</h2>
+<p>Mikołaj Pyka, orbitalshipyard.studio@gmail.com</p>
+</body></html>
