@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pinterest Publisher - Orbital Shipyard</title>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222;background:#f6f3ee}a{color:#a3402c}code{background:#ece6dc;padding:0 4px}</style></head>
+<body>
+<h1>Orbital Shipyard Publisher: Pinterest</h1>
+<p>A private automation of the Orbital Shipyard art studio (Mikołaj Pyka, Poland). It is used only on our own Pinterest business account, <a href="https://www.pinterest.com/orbitalshipyardstudio/">pinterest.com/orbitalshipyardstudio</a>.</p>
+<h2>What it does</h2>
+<ul>
+<li>We design isometric sci-fi illustrations and sell them as posters in our Etsy shop <a href="https://www.etsy.com/shop/OrbitalShipyardArt">OrbitalShipyardArt</a>.</li>
+<li>When a new poster is published, a scheduled GitHub Actions job lists our own boards (<code>GET /v5/boards</code>) and creates one Pin (<code>POST /v5/pins</code>) on our board with the clean image of that artwork and a link to its Etsy listing. Title and description come from our own listing.</li>
+<li>Once a week it reads statistics of our own Pins (<code>GET /v5/pins/{id}/analytics</code>) for our internal report.</li>
+</ul>
+<h2>Volume</h2>
+<p>About 2 to 3 Pins per day, only our own original artwork. No repins of other users' content, no scraping, no automated likes, follows, comments or messages.</p>
+<h2>Users and data</h2>
+<p>One user: the studio's own Pinterest business account, authorized once with OAuth 2.0. No other Pinterest users sign in, and no data about other users is collected or stored. The refresh token is stored encrypted. See the <a href="privacy.html">privacy policy</a> and <a href="terms.html">terms</a>.</p>
+<h2>Contact</h2>
+<p>orbitalshipyard.studio@gmail.com</p>
+<p><a href="index.html">Orbital Shipyard</a></p>
+</body></html>
